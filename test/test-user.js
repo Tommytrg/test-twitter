@@ -1,6 +1,4 @@
-
 /*jshint esversion: 6*/
-/*
 const mongoose = require('mongoose');
 const ScrappedInfo = require('../models/scrappedInfo.model');
 const chai = require('chai');
@@ -11,9 +9,9 @@ const url = 'http://localhost:3000';
 const getUserInfo = '../controllers/scrappedInfo.controller';
 //const url = 'https://twitter-info-scrapping.herokuapp.com';
 chai.use(chaiHttp);
-*/
+
 /*Test for /api/user/:username endpoint*/
-/*
+
 describe('Get twitter user info', (done) => {
   it('it should GET an object with id property', (done => {
     chai.request(url)
@@ -43,6 +41,5 @@ describe('Get twitter user info', (done) => {
         res.body.data.should.have.property('bio');
         res.body.data.should.have.property('total_tweets');
       }).then(done, done);
-    }));
+  }));
 });
-*/

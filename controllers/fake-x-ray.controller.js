@@ -6,16 +6,17 @@ const x = Xray();
 const url = 'https://twitter.com/influencity';
 
 exports.getString = (req, res, next) => {
-  return x(url, '.u-linkComplex-target')((err, name) => {
+  x(url, '.u-linkComplex-target')((err, name) => {
     if (err) {
       let msg = 'error getting string';
       return handleError(res, msg, err);
     }
+    return res.status(200).json(name);
   });
 };
 
 exports.getObject = (req, res, next) => {
-  return x(url, '.ProfileAvatar-image', {
+  x(url, '.ProfileAvatar-image', {
       'ProfileAvatar-image': '',
       src: '@src'
     })
@@ -24,11 +25,12 @@ exports.getObject = (req, res, next) => {
         let msg = 'error getting photo_url';
         return handleError(res, msg, err);
       }
+      return res.status(200).json(array);
     });
 };
 
 exports.getArray = (req, res, next) => {
-  return x(url + req.params.username, '.ProfileNav-value', [{
+  x(url + req.params.username, '.ProfileNav-value', [{
       '.ProfileNav-value': ''
     }])
     ((err, array) => {
@@ -36,6 +38,7 @@ exports.getArray = (req, res, next) => {
         let msg = 'error getting array with followers, following and tweets';
         return handleError(res, msg, err);
       }
+      return res.status(200).json(array);
     });
 };
 

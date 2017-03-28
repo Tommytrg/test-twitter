@@ -10,30 +10,28 @@ const url = 'http://localhost:3000';
 //const url = 'https://twitter-info-scrapping.herokuapp.com';
 chai.use(chaiHttp);
 
-//works
 describe('GET scrapped info by x-ray', done => {
   it('it should GET a string', (done => {
-    chai.request(url)
-      .get('/fake-x-ray/get-string')
-      .then((err, res) => {
+    chai.request('localhost:3000/fake-x-ray/get-string')
+      .get('')
+      .then(res => {
         res.body.should.be.a('string');
-      }).then(done());
+      }).then(done, done);
   }));
 
   it('it should GET a object', (done => {
     chai.request(url)
       .get('/fake-x-ray/get-object')
-      .then((err, res) => {
+      .then(res => {
         res.body.should.be.a('object');
-      }).then(done());
+      }).then(done, done);
   }));
 
-    it('it should GET a array', (done => {
-      chai.request(url)
-        .get('/fake-x-ray/get-array')
-        .then((err, res) => {
-          res.body.should.be.a('array');
-          done();
-        }).then(done());
-    }));
+  it('it should GET a array', (done => {
+    chai.request(url)
+      .get('/fake-x-ray/get-array')
+      .then(res => {
+        res.body.should.be.a('array');
+      }).then(done, done);
+  }));
 });

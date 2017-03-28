@@ -16,7 +16,7 @@ describe('Check routes', done => {
       .get('/')
       .then(res => {
         res.should.have.property('status', 200);
-      }).then(done());
+      }).then(done,done);
   });
 
   it('/api/user should GET a 200 status code', (done => {
@@ -24,7 +24,7 @@ describe('Check routes', done => {
       .get('/influencity')
       .then(res => {
         res.should.have.property('status', 200);
-      }).then(done());
+      }).then(done, done);
   }));
 
   it('log/list should GET a 200 status code', (done => {
@@ -32,6 +32,6 @@ describe('Check routes', done => {
       .get('')
       .then(res => {
         res.should.have.property('status', 200);
-      }).then(done());
+      }).then(done, done);
   }));
 });
