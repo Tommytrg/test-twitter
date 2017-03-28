@@ -21,7 +21,7 @@ const scrappedInfoSchema = mongoose.Schema({
   },
   photo_url: {
     type: String,
-    required: true
+    required: true 
   },
   bio: {
     type: String,
