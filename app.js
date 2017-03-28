@@ -1,6 +1,6 @@
 /*jshint esversion: 6*/
 var express = require('express');
-var path = require('path'); 
+var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
@@ -12,7 +12,7 @@ const index = require('./routes/index');
 
 const app = express();
 
-mongoose.connect('process.env.MONGODB_URI');
+mongoose.connect(process.env.MONGODB_URI);
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
