@@ -5,7 +5,9 @@ const chai = require('chai');
 const chaiHttp = require('chai-http');
 const server = require('../app');
 const should = chai.should();
-const url = 'http://localhost:3000';
+const url = 'https://twitter-info-scrapping.herokuapp.com/';
+
+//const url = 'http://localhost:3000';
 chai.use(chaiHttp);
 
 /*Test for /api/log/list endpoint*/
