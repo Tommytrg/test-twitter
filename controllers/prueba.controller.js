@@ -25,10 +25,10 @@ exports.test = (req, res, next) => {
   scrappingName.then((name) => {
     scrappedInfo.screen_name = name;
     scrappingFollowersFollowingTweets.then(array => {
-      scrappedInfo.total_tweets = array[0];
-      scrappedInfo.followers_count = array[1];
-      scrappedInfo.following_count = array[2];
-      return res.status(200).json(scrappedInfo);
+      // scrappedInfo.total_tweets = array[0];
+      // scrappedInfo.followers_count = array[1];
+      // scrappedInfo.following_count = array[2];
+      return res.status(200).json(array);
     });
   });
 };
