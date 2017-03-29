@@ -44,11 +44,11 @@ const getScreenName = (req, res, resolve) => {
 };
 
 const getFollowersAndFollowingAndTweets = (req, res, resolve) => {
-  console.log('TEST:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::');
   x(url + req.params.username, '.ProfileNav-value', [{
       '.ProfileNav-value': ''
     }])
     ((err, array) => {
+      console.log('TEST:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::');
       if (err) {
         let msg = ' error getting array with followers, following and tweets';
         return handleError(res, msg, err);
