@@ -1,5 +1,4 @@
-/*jshint esversion:6*/
-const scrappedInfoModel = require('../models/scrappedInfo.model');
+/*jshint esversion:6*/const scrappedInfoModel = require('../models/scrappedInfo.model');
 const mongoose = require('mongoose');
 const Xray = require('x-ray');
 const x = Xray();
