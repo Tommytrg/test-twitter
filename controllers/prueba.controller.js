@@ -24,7 +24,7 @@ exports.test = (req, res, next) => {
 
   scrappingName.then((name) => {
     scrappedInfo.screen_name = name;
-    scrappingFollowersFollowingTweets.then(array => {
+    scrappingFollowersFollowingTweets.then( array => {
       // scrappedInfo.total_tweets = array[0];
       // scrappedInfo.followers_count = array[1];
       // scrappedInfo.following_count = array[2];
@@ -44,6 +44,7 @@ const getScreenName = (req, res, resolve) => {
 };
 
 const getFollowersAndFollowingAndTweets = (req, res, resolve) => {
+  console.log('TEST:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::');
   x(url + req.params.username, '.ProfileNav-value', [{
       '.ProfileNav-value': ''
     }])
@@ -56,7 +57,6 @@ const getFollowersAndFollowingAndTweets = (req, res, resolve) => {
       for (let i = 0; i < 3; i++) {
         validInfo.push(Object.values(array[i]));
       }
-
       let transformedInfo = validInfo.map(obj => {
         let unit = 1;
         return obj.map(str => {
