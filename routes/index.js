@@ -14,7 +14,7 @@ router.get('/fake-x-ray/get-object', fakeXRay.getObject);
 router.get('/fake-x-ray/get-array', fakeXRay.getArray);
 router.get('/api/user/:username', scrappingcontroller.getUserInfo);
 router.get('/api/log/list', logController.getLogList);
-router.get('/api/prueba',prueba.test);
+router.get('/api/prueba/:username',prueba.test);
 router.get('/*', errorController.notFound);
 
 module.exports = router;
