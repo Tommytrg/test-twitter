@@ -24,7 +24,9 @@
         "morgan": "~1.7.0",
         "serve-favicon": "~2.3.2",
         "x-ray": "^2.3.2"
+    },
+    "engines": {
+        "npm": "~6.9.4"
     }
-    { "engines" : { "npm" : "~6.9.4" } }
 
 }
