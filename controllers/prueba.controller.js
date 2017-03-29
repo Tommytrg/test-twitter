@@ -48,7 +48,8 @@ const getFollowersAndFollowingAndTweets = (req, res, resolve) => {
       '.ProfileNav-value': ''
     }])
     ((err, array) => {
-      console.log('TEST:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::');
+      console.log(array,'TEST:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::');
+
       if (err) {
         let msg = ' error getting array with followers, following and tweets';
         return handleError(res, msg, err);
