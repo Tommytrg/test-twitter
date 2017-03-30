@@ -10,6 +10,8 @@ const should = chai.should();
 const url = 'http://twitter-info-scrapping.herokuapp.com';
 chai.use(chaiHttp);
 
+/*Test fake x-ray*/
+
 describe('GET scrapped info by x-ray', done => {
   it('it should GET a string', (done => {
     chai.request('localhost:3000/fake-x-ray/get-string')

@@ -8,7 +8,8 @@ const should = chai.should();
 //const url = 'http://localhost:3000';
 const url = 'http://twitter-info-scrapping.herokuapp.com';
 chai.use(chaiHttp);
-//works
+
+/*Test routes*/
 
 describe('Check routes', done => {
   it('/ should GET 200 status code', done => {

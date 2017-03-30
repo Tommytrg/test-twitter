@@ -11,8 +11,6 @@ chai.use(chaiHttp);
 
 /*Test for /api/log/list endpoint*/
 
-/*Test for /api/log/list endpoint*/
-
 describe('Get log of twitter info', done => {
   it('it should GET an array', (done => {
     chai.request(url)
